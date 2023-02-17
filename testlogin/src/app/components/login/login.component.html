@@ -1,0 +1,22 @@
+<div class="login">
+    <form class="custom-form" method="post">
+      <h1>Login</h1>
+      <input *ngIf="firstView"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <button *ngIf="firstView" type="submit" (click)="changeView()">Continuar</button>
+      <input *ngIf="!firstView"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+      />
+      <button type="submit" *ngIf="!firstView" (click)="login()">Iniciar Sesión</button>
+    </form>
+  </div>
+  
